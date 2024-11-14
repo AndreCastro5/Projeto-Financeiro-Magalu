@@ -1,3 +1,4 @@
+#%%
 # Libs para Modelagem e Matrizes
 import numpy as np
 import pandas as pd 
@@ -13,27 +14,25 @@ import warnings
 # Desabilitando avisos 
 warnings.filterwarnings('ignore')
 
-# Lib para ler o arquivo Df
-import os 
-
+#%%
 # Lendo dados 
-os.chdir('C:\\Users\\andre\\OneDrive\\Área de Trabalho\\python\\Projeto Financeiro Magalu')
-Base_dados = pd.read_excel('Vase_004 - Magalu - Sem Resolução.xlsx')
+
+Base_dados = pd.read_excel('Vase_004_Magalu _Sem_Resolução.xlsx')
 
 # Verificar dados 
-print(Base_dados.shape)
-
-print(Base_dados.head())
-
-print(Base_dados.info)
-
+Base_dados.shape
+#%%
+Base_dados.head()
+#%%
+Base_dados.info()
+#%%
 # Análises por tabela 
-print(Base_dados.describe())
-
+Base_dados.describe()
+#%%
 # Series Temporais 
 Dados = Base_dados.set_index('Data')
 
-print(Dados.head)
+(Dados.head)
 
 # Grafico Análise das Ações da magalu - Fechamento 
 
